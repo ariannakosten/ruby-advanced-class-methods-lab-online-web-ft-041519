@@ -51,7 +51,7 @@ class Song
    name = info[1].remove(".mp3")
    
    song = self.new
-   
+   song.name = song_name
    
    
   end
