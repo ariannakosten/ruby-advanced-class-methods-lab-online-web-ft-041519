@@ -46,17 +46,16 @@ class Song
   end  
   
   def self.new_from_filename(filename)
-                                  
-   info = filename.split(" - ")    #define a variable for what ur doing so it can be called below
-   artist_name = info[0]
-   song_name = info[1].gsub(".mp3", "")
+                                             # expected WANTS: "For Love I Come"
+                                  #got: "Thundercat - For Love I Come.mp3" (split string apart -)
+   info = filename.split(" - ")  #define a var "info" for what ur doing so it can be called below
+   artist_name = info[0]                #Thundercat [0], For Love I Come.mp3[1]
+   song_name = info[1].gsub(".mp3", "")   #.gsub will sub something for something .mp3 for nothing
    
-   song = self.new
-   song.name = song_name
-   song.artist_name = artist_name
-   song
-   
-   
+   song = self.new                            #create new song
+   song.name = song_name                      #song.name = song name from above : info[1].gsub
+   song.artist_name = artist_name             #song.artistname = artist above : info 0
+   song                                       #return that song
   end
   
   def self.create_from_filename(filename)
