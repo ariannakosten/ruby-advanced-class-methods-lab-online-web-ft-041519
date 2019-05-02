@@ -50,6 +50,7 @@ class Song
    artist = info[0]
    name = info[1].remove(".mp3")
    
+   song = self.new
    
    
    
