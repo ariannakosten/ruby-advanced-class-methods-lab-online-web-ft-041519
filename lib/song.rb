@@ -45,7 +45,7 @@ class Song
     @@all.sort_by{|song| song.name}
   end  
   
-  def self.new_from_filename(filename)
+  def self.new_from_filename(filename) #
                                              # expected WANTS: "For Love I Come"
                                   #got: "Thundercat - For Love I Come.mp3" (split string apart -)
    info = filename.split(" - ")  #define a var "info" for what ur doing so it can be called below
@@ -55,7 +55,7 @@ class Song
    song = self.new                            #create new song
    song.name = song_name                      #song.name = song name from above : info[1].gsub
    song.artist_name = artist_name             #song.artistname = artist above : info 0
-   song                                       #return that song
+   song                                       #return that song with artist name acc to test
   end
   
   def self.create_from_filename(filename)
