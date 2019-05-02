@@ -54,7 +54,7 @@ class Song
    
    song = self.new                            #create new song
    song.name = song_name                      #song.name = song name from above : info[1].gsub
-   song.artist_name = artist_name             #song.artistname = artist above : info 0
+   #song.artist_name = artist_name             #song.artistname = artist above : info 0
    song                                       #return that song
   end
   
