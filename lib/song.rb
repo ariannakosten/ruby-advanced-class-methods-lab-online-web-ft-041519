@@ -59,8 +59,7 @@ class Song
   end
   
   def self.create_from_filename(filename)
-   song = self.new_from_filename
-   song.name = filename
+   song = self.new_from_filename(filename)  #if using another method must include tht methods arg
    song.save
    song
   end
